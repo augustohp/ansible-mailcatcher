@@ -1,0 +1,9 @@
+# defaults/main.yml
+#
+# Avilable configuration for mailcatcher installation
+# ex: ft=ansible et ts=4 sw=4:
+---
+
+mailcatcher:
+    options:
+        bin_dir: /usr/local/bin

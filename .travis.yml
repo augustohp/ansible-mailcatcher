@@ -1,0 +1,14 @@
+language: python
+python: "2.7"
+
+env:
+  - PLAYBOOK=defaults
+
+install:
+  - sudo apt-get update
+  - pip install ansible
+
+script:
+  - ansible-playbook -i inventory/travis.ini tests/$PLAYBOOK.yml --connection=local --sudo
+
+# ex: et sw=2 ts=2:

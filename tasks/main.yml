@@ -1,0 +1,14 @@
+# tasks/main.yml
+#
+# Installs mailcatcher
+# ex: ft=ansible et ts=2 sw=2:
+---
+
+- include: "pre-installation-Debian.yml"
+  when: ansible_os_family == "Debian"
+
+- name: Installation
+  gem:
+    name: mailcatcher
+    state: present
+

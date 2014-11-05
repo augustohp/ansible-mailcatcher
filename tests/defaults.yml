@@ -1,0 +1,15 @@
+# tests/defaults.yml
+#
+# Test Playbook:
+# Installation and service execution with
+# default options.
+# ex: ft=ansible et ts=2 sw=2:
+---
+
+- name: Test | Default installation and service setup
+  hosts: all
+  sudo: yes
+  vars_files:
+    - "../defaults/main.yml"
+  tasks:
+    - include: "../tasks/main.yml"

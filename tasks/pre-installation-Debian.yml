@@ -1,0 +1,15 @@
+# tasks/pre-installation-Debian.yml
+#
+# Debian actions required before installation
+# of the mailcatcher gem.
+# ex: ft=ansible et ts=2 sw=2:
+---
+
+- name: Debian | Install OS requeriments
+  apt:
+    pkg: "{{ item }}"
+    state: present
+    update_cache: yes
+  with_items:
+    - build-essential
+    - rubygems
